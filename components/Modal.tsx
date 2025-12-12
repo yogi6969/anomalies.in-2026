@@ -65,30 +65,37 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        mode: 'cors'
       });
 
-      if (response.ok || response.status === 200) {
+      console.log('Webhook response status:', response.status);
+      console.log('Webhook response:', response);
+
+      // n8n webhooks typically return 200 or 201
+      if (response.ok || response.status === 200 || response.status === 201) {
         setStatus(FormStatus.SUCCESS);
         setTimeout(() => {
           onClose();
           // Reset form after close animation
           setTimeout(() => {
             setStatus(FormStatus.IDLE);
-            setFormData({ 
-              email: '', 
-              company: '', 
-              whatsapp: '', 
-              preferWhatsapp: false, 
-              inquiry: '' 
+            setFormData({
+              email: '',
+              company: '',
+              whatsapp: '',
+              preferWhatsapp: false,
+              inquiry: ''
             });
           }, 300);
         }, 3500); // Increased time to read success message
       } else {
-        throw new Error('Webhook failed');
+        const errorText = await response.text();
+        console.error('Webhook error:', errorText);
+        throw new Error(`Webhook failed with status ${response.status}`);
       }
     } catch (error) {
-      console.error(error);
+      console.error('Form submission error:', error);
       setStatus(FormStatus.ERROR);
     }
   };
