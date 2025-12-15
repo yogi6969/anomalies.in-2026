@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-8 flex justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-slate-600 ring-1 ring-slate-900/10 hover:ring-slate-900/20 bg-white/50 backdrop-blur">
-              Redefining Sales Operations <span className="font-semibold text-primary-600 ml-1">AI-First</span>
+              Fixing Sales Operations <span className="font-semibold text-primary-600 ml-1">AI-First</span>
             </div>
           </div>
           
