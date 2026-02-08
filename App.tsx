@@ -34,10 +34,10 @@ const App: React.FC = () => {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Ready to Fix Your Communication Chaos?
+                Ready to Upgrade Your Sales Workflow?
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">
-                Share your biggest bottleneck and let's explore how we architect solutions that actually work for your business model.
+                Share your biggest bottleneck. We'll show you exactly where AI can improve your existing process.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <button

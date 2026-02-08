@@ -5,25 +5,25 @@ const steps = [
   {
     id: '01',
     name: 'Audit',
-    description: 'We analyze your current communication channels to identify where leads are dropping off and where manual work is slowing you down.',
+    description: 'We map your current sales workflow to find where leads drop off and where manual work is slowing you down.',
     icon: Search,
   },
   {
     id: '02',
     name: 'Architect',
-    description: 'We design a custom AI workflow blueprint tailored to your specific business logic, inventory systems, and team structure.',
+    description: 'We design AI improvements that layer onto your existing tools — no rip-and-replace required.',
     icon: PenTool,
   },
   {
     id: '03',
     name: 'Automate',
-    description: 'We build and deploy the system, connecting WhatsApp, CRM, and email into a unified, intelligent response engine.',
+    description: 'We deploy automation that works with what you already use — WhatsApp, CRM, email, all connected.',
     icon: Zap,
   },
   {
     id: '04',
     name: 'Accelerate',
-    description: 'Your new system runs 24/7, engaging leads instantly and handing off ready-to-close deals to your sales team.',
+    description: 'Your upgraded workflow runs 24/7 with AI-suggested improvements, turning leads into revenue on autopilot.',
     icon: BarChart3,
   },
 ];
@@ -38,7 +38,7 @@ export const Process: React.FC = () => {
             From Chaos to Clarity
           </p>
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            We don't just give you a tool; we implement a complete operational transformation.
+            We don't replace your tools — we upgrade how they work together.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export const Process: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{step.name}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{step.description}</p>
-                
+
                 {/* Connector line for desktop */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 text-slate-300">
