@@ -185,7 +185,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   type="tel"
                   id="whatsapp"
                   name="whatsapp"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+91 98765 43210"
                   value={formData.whatsapp}
                   onChange={handleChange}
                   className="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
