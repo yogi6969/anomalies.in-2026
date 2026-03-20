@@ -1,0 +1,90 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  type?: 'website' | 'article';
+  publishedDate?: string;
+  schema?: Record<string, unknown>;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = '/og-image.png',
+  type = 'website',
+  publishedDate,
+  schema,
+} = Astro.props;
+
+const siteName = 'Anomalies.in';
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Anomalies.in',
+  url: 'https://anomalies.in',
+  logo: 'https://anomalies.in/logo.png',
+  description: 'AI automation partner for enterprise technology leaders in India. We build invoice automation, ERP integration, agentic workflows, and enterprise chatbots.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bangalore',
+    addressRegion: 'Karnataka',
+    addressCountry: 'IN',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/anomalies-in/',
+  ],
+};
+
+const professionalServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Anomalies.in',
+  url: 'https://anomalies.in',
+  description: 'AI automation consulting and implementation for Indian enterprise. Invoice OCR, ERP integration, agentic workflows, and enterprise chatbots.',
+  areaServed: {
+    '@type': 'Country',
+    name: 'India',
+  },
+  serviceType: ['AI Automation', 'Invoice Processing', 'ERP Integration', 'Enterprise Chatbots'],
+  priceRange: '$$',
+};
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content="index, follow" />
+
+<!-- Geo targeting -->
+<meta name="geo.region" content="IN-KA" />
+<meta name="geo.placename" content="Bangalore" />
+<meta name="geo.position" content="12.9716;77.5946" />
+<meta name="ICBM" content="12.9716, 77.5946" />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+<meta property="og:locale" content="en_IN" />
+{publishedDate && <meta property="article:published_time" content={publishedDate} />}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(ogImage, Astro.site).href} />
+
+<!-- Schema: Organization (always present) -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(professionalServiceSchema)} />
+
+<!-- Page-specific schema -->
+{schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}

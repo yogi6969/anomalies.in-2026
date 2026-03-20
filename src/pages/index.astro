@@ -1,0 +1,467 @@
+---
+import Base from '../layouts/Base.astro';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How quickly can we see results?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most pilots produce a working prototype within 2 weeks. Full production deployment happens within 90 days. You will have measurable results — cost savings, cycle time reduction, volume processed — before the engagement ends.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if the pilot does not meet targets?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We keep working at no extra cost. Every pilot has defined success criteria agreed upfront. If we do not hit them, we continue iterating until we do. Fixed-price means fixed-price.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do we need to replace our existing systems?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. We build automation that overlays your existing Oracle, SAP, Tally, or other systems. No rip-and-replace. No disruption to running operations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Discovery is free. Scoped pilots are fixed-price between Rs 3-8 lakh depending on scope. Ongoing retainers run Rs 50,000-1.5 lakh per month. No hidden fees, no hourly billing surprises.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will our team need training?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, and it is included. Every engagement ends with documentation, runbooks, and hands-on training so your team can operate and maintain the system independently.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What industries do you work with?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Manufacturing, BFSI, Retail, Education, and Healthcare.',
+      },
+    },
+  ],
+};
+---
+
+<Base
+  title="Anomalies.in"
+  description="AI automation partner for Indian enterprise. We build invoice OCR, ERP integration, and agentic workflows. Fixed-price pilots, 90-day delivery."
+  schema={faqSchema}
+>
+
+  <!-- HERO -->
+  <section class="section-padding relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-electric-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="container-narrow relative text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-electric-500/10 border border-electric-500/20 rounded-full text-electric-400 text-sm font-medium mb-8">
+        <span class="w-1.5 h-1.5 bg-electric-400 rounded-full animate-pulse"></span>
+        Embedded AI Partner for Indian Enterprise
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+        Your <span class="gradient-text">AI Solutioning</span><br />Partner
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+        We embed with enterprise technology teams to build AI automations that ship real results.
+        Fixed-price pilots. Zero lock-in. Numbers for your next review.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/blueprint/" class="btn-primary text-base px-8 py-4">
+          Get Free Blueprint
+          <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="/case-studies/" class="btn-secondary text-base px-8 py-4">
+          See Our Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF BAR -->
+  <section class="bg-gray-50 border-y border-gray-200">
+    <div class="container-narrow py-10">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div class="text-center border-b sm:border-b-0 sm:border-r border-gray-200 pb-8 sm:pb-0 sm:pr-8">
+          <div class="text-4xl font-bold text-electric-400 mb-1">5</div>
+          <div class="text-sm font-medium text-gray-700 uppercase tracking-wider">AI Systems</div>
+          <div class="text-xs text-gray-500 mt-1">Built and running in production</div>
+        </div>
+        <div class="text-center border-b sm:border-b-0 sm:border-r border-gray-200 pb-8 sm:pb-0 sm:px-8">
+          <div class="text-4xl font-bold text-electric-400 mb-1">
+            15 <span class="text-gray-500 text-xl font-normal">to</span> 2
+          </div>
+          <div class="text-sm font-medium text-gray-700 uppercase tracking-wider">Days</div>
+          <div class="text-xs text-gray-500 mt-1">Invoice cycle time reduction</div>
+        </div>
+        <div class="text-center sm:pl-8">
+          <div class="text-4xl font-bold text-electric-400 mb-1">90</div>
+          <div class="text-sm font-medium text-gray-700 uppercase tracking-wider">Days</div>
+          <div class="text-xs text-gray-500 mt-1">Experiment to production</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS GRID -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What We Build</h2>
+        <p class="text-gray-500 max-w-xl mx-auto">
+          Enterprise-grade AI automation across four core capability areas.
+          Each system integrates with your existing infrastructure — no replacement required.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <a href="/solutions/invoice-automation/" class="card group block">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-11 h-11 bg-electric-500/10 rounded-lg flex items-center justify-center group-hover:bg-electric-500/20 transition-colors">
+              <svg class="w-6 h-6 text-electric-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-electric-400 transition-colors">
+                Invoice & Document Automation
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                AI-powered OCR, classification, and 3-way matching. Process invoices in minutes, not weeks.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="/solutions/erp-integration/" class="card group block">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-11 h-11 bg-electric-500/10 rounded-lg flex items-center justify-center group-hover:bg-electric-500/20 transition-colors">
+              <svg class="w-6 h-6 text-electric-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-electric-400 transition-colors">
+                ERP Integration
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Connect Oracle EBS, SAP, and Tally to automated workflows. Real-time data, zero manual extraction.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="/solutions/agentic-workflows/" class="card group block">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-11 h-11 bg-electric-500/10 rounded-lg flex items-center justify-center group-hover:bg-electric-500/20 transition-colors">
+              <svg class="w-6 h-6 text-electric-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-electric-400 transition-colors">
+                Agentic AI Workflows
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Multi-step autonomous systems for approvals, vendor onboarding, MIS generation, and exception routing.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="/solutions/enterprise-ai-chatbots/" class="card group block">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-11 h-11 bg-electric-500/10 rounded-lg flex items-center justify-center group-hover:bg-electric-500/20 transition-colors">
+              <svg class="w-6 h-6 text-electric-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-electric-400 transition-colors">
+                Enterprise AI Chatbots
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Teams and WhatsApp bots that answer from YOUR documents. SOPs, policies, PO status — instant.
+              </p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How We Work</h2>
+        <p class="text-gray-500 max-w-xl mx-auto">
+          Four phases. No ambiguity, no open-ended timelines.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <!-- Connector line (desktop only) -->
+        <div class="hidden lg:block absolute top-10 left-[calc(12.5%+1rem)] right-[calc(12.5%+1rem)] h-px bg-gradient-to-r from-transparent via-electric-500/30 to-transparent pointer-events-none"></div>
+
+        {[
+          { num: '01', title: 'Audit', desc: 'Free workflow analysis. We map your top 3 automation opportunities and estimate ROI before you spend a rupee.' },
+          { num: '02', title: 'Architect', desc: 'Fixed-price scoped pilot with defined success criteria. Working prototype in 2 weeks.' },
+          { num: '03', title: 'Automate', desc: 'Build, test, and deploy to your infrastructure. Complete documentation and team training included.' },
+          { num: '04', title: 'Accelerate', desc: 'Monthly retainer to maintain, optimize, and scale to the next highest-ROI automation opportunity.' },
+        ].map((step) => (
+          <div class="text-center">
+            <div class="w-20 h-20 bg-gray-100 border border-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-5 relative z-10">
+              <span class="text-2xl font-bold text-electric-400">{step.num}</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-12">
+        <a href="/how-we-work/" class="btn-secondary">
+          See Full Process Details
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIP SECTION -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            We Do Not Do One-Off Projects.
+            <br />
+            <span class="gradient-text">We Become Part of Your Team.</span>
+          </h2>
+          <p class="text-gray-500 leading-relaxed mb-8">
+            Most vendors hand you a finished product and disappear. We work on a retainer model —
+            meaning we are incentivized to make your systems better every month, not just deliver
+            once and move on.
+          </p>
+          <div class="space-y-5">
+            {[
+              { step: '1', title: 'Retainer Engagement', desc: 'We agree on scope, success criteria, and monthly rate upfront. No surprises.' },
+              { step: '2', title: 'Build & Deploy', desc: 'Fixed-price pilot goes to production. You own the system and the infrastructure.' },
+              { step: '3', title: 'Ongoing Maintenance', desc: 'Monthly optimization, monitoring, and issue resolution.' },
+              { step: '4', title: 'Scale to Next Use Case', desc: 'Once one system is stable, we identify the next highest-ROI opportunity.' },
+            ].map((item) => (
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-electric-500/10 border border-electric-500/20 rounded-full flex items-center justify-center text-electric-400 text-sm font-bold">
+                  {item.step}
+                </div>
+                <div>
+                  <div class="text-gray-900 font-medium text-sm">{item.title}</div>
+                  <div class="text-gray-500 text-sm mt-0.5">{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="card border-electric-500/20 bg-gradient-to-br from-navy-800 to-navy-700">
+          <div class="text-electric-400 text-xs font-semibold uppercase tracking-wider mb-4">Why This Matters</div>
+          <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            A vendor delivers a project. A partner delivers results.
+            The difference is accountability after go-live.
+          </p>
+          <div class="space-y-3 text-sm text-gray-500">
+            {[
+              'Aligned incentives — we succeed when you succeed',
+              'Predictable monthly cost, not hourly billing surprises',
+              'Deep institutional knowledge of your systems over time',
+              'Compounding ROI as each system learns and improves',
+            ].map((point) => (
+              <div class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {point}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER VALUE SECTION -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="card border-electric-400/20 bg-gradient-to-br from-navy-800 via-navy-700 to-navy-800 p-8 sm:p-12 text-center">
+        <div class="text-electric-400 text-xs font-semibold uppercase tracking-wider mb-4">For Technology Leaders</div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          Every System We Ship Gives You a Number
+          <br class="hidden sm:block" />for Your Next Review
+        </h2>
+        <p class="text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">
+          We understand how enterprise careers work. Promotions and influence come from measurable outcomes.
+          We help VPs and IT heads build their AI portfolio with concrete, defensible numbers —
+          cost savings, cycle time reduction, and production deployment count.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
+          {[
+            { metric: 'Cost Savings', desc: 'Quantified reduction in manual processing cost' },
+            { metric: 'Cycle Time', desc: 'Before vs. after documented for stakeholders' },
+            { metric: 'Deployments', desc: 'Count of AI systems live under your leadership' },
+          ].map((item) => (
+            <div class="bg-white/50 rounded-lg p-4 border border-gray-200">
+              <div class="text-electric-400 font-semibold text-sm mb-1">{item.metric}</div>
+              <div class="text-gray-500 text-xs">{item.desc}</div>
+            </div>
+          ))}
+        </div>
+        <a href="/blueprint/" class="btn-primary">
+          Build Your AI Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          {
+            title: 'Fixed-Price Pilots',
+            desc: 'No hourly billing. No scope creep invoices. One number agreed upfront.',
+          },
+          {
+            title: 'Knowledge Transfer Included',
+            desc: 'Runbooks, training, and documentation shipped with every system.',
+          },
+          {
+            title: 'Your Data, Your Infrastructure',
+            desc: 'We deploy to your servers. No vendor lock-in. You own everything.',
+          },
+          {
+            title: 'Indian Enterprise Stack',
+            desc: 'Built for Oracle EBS, Tally, GST workflows, and local compliance.',
+          },
+        ].map((item) => (
+          <div class="flex gap-3">
+            <div class="flex-shrink-0 mt-0.5">
+              <svg class="w-5 h-5 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-gray-900 font-semibold text-sm">{item.title}</div>
+              <div class="text-gray-500 text-sm mt-1 leading-relaxed">{item.desc}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Common Questions</h2>
+        <p class="text-gray-500">Straight answers. No marketing fluff.</p>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-3">
+        {[
+          {
+            q: 'How quickly can we see results?',
+            a: 'Most pilots produce a working prototype within 2 weeks. Full production deployment happens within 90 days. You will have measurable results — cost savings, cycle time reduction, volume processed — before the engagement ends.',
+          },
+          {
+            q: 'What if the pilot does not meet targets?',
+            a: 'We keep working at no extra cost. Every pilot has defined success criteria agreed upfront. If we do not hit them, we continue iterating until we do. Fixed-price means fixed-price.',
+          },
+          {
+            q: 'Do we need to replace our existing systems?',
+            a: 'No. We build automation that overlays your existing Oracle, SAP, Tally, or other systems. No rip-and-replace. No disruption to running operations.',
+          },
+          {
+            q: 'How much does it cost?',
+            a: 'Discovery is free. Scoped pilots are fixed-price between Rs 3-8 lakh depending on scope. Ongoing retainers run Rs 50,000-1.5 lakh per month. No hidden fees, no hourly billing surprises.',
+          },
+          {
+            q: 'Will our team need training?',
+            a: 'Yes, and it is included. Every engagement ends with documentation, runbooks, and hands-on training so your team can operate and maintain the system independently. Knowledge transfer is not optional — it is part of the delivery.',
+          },
+          {
+            q: 'What industries do you work with?',
+            a: 'Manufacturing, BFSI, Retail, Education, and Healthcare. We have built automation for invoice reconciliation, vendor onboarding, MIS generation, and document classification across these sectors.',
+          },
+        ].map((faq) => (
+          <div class="card faq-item cursor-pointer">
+            <button class="w-full text-left flex items-center justify-between gap-4 faq-trigger" aria-expanded="false">
+              <span class="font-medium text-gray-900">{faq.q}</span>
+              <svg class="w-5 h-5 text-gray-500 flex-shrink-0 faq-icon transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer hidden mt-4 pt-4 border-t border-gray-200 text-gray-500 text-sm leading-relaxed">
+              {faq.a}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-padding">
+    <div class="container-narrow text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        Ready to Ship Your First AI Win?
+      </h2>
+      <p class="text-gray-500 max-w-xl mx-auto mb-8 leading-relaxed">
+        Start with a free blueprint. We audit your workflows, identify your top 3 automation
+        opportunities, and give you a clear implementation timeline. No commitment required.
+      </p>
+      <a href="/blueprint/" class="btn-primary text-base px-8 py-4">
+        Get Free Blueprint
+        <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</Base>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const trigger = item.querySelector('.faq-trigger') as HTMLButtonElement;
+    const answer = item.querySelector('.faq-answer') as HTMLElement;
+    const icon = item.querySelector('.faq-icon') as HTMLElement;
+
+    trigger?.addEventListener('click', () => {
+      const isOpen = !answer.classList.contains('hidden');
+      // Close all first
+      document.querySelectorAll('.faq-answer').forEach((a) => a.classList.add('hidden'));
+      document.querySelectorAll('.faq-trigger').forEach((t) => t.setAttribute('aria-expanded', 'false'));
+      document.querySelectorAll('.faq-icon').forEach((ic) => ic.classList.remove('rotate-180'));
+      // Open clicked if it was closed
+      if (!isOpen) {
+        answer.classList.remove('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+</script>

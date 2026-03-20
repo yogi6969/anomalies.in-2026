@@ -1,0 +1,361 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="How We Work"
+  description="Four phases from workflow audit to production AI. Fixed-price pilots, defined success criteria, and risk reversal guarantee."
+>
+
+  <!-- PAGE HEADER -->
+  <section class="section-padding bg-gray-50 border-b border-gray-200">
+    <div class="container-narrow">
+      <div class="max-w-2xl">
+        <div class="text-electric-400 text-sm font-semibold uppercase tracking-wider mb-4">Process</div>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          How We Work
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed">
+          Four phases that take you from workflow audit to production AI system.
+          Every phase has a clear deliverable, timeline, and price. No ambiguity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASES -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      <div class="space-y-16">
+
+        <!-- Phase 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 bg-electric-500/10 border border-electric-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-bold text-electric-400">01</span>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Weeks 1-2</div>
+                <h2 class="text-2xl font-bold text-gray-900">Discovery Sprint</h2>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              We start by understanding your current workflows before writing a single line of code.
+              This is a structured audit, not a sales call. We ask hard questions, map your
+              processes, and identify exactly where automation creates the highest ROI.
+            </p>
+            <div class="space-y-3">
+              <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wider">What we deliver</h3>
+              {[
+                'Current workflow documentation and process map',
+                'Top 3 automation opportunities ranked by ROI and complexity',
+                'Estimated cost savings and cycle time reduction for each',
+                'Recommended pilot scope with timeline and pricing',
+              ].map((item) => (
+                <div class="flex items-start gap-2 text-sm text-gray-500">
+                  <svg class="w-4 h-4 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="card border-electric-500/10">
+            <div class="text-xs font-semibold text-electric-400 uppercase tracking-wider mb-3">Pricing</div>
+            <div class="text-4xl font-bold text-gray-900 mb-2">Free</div>
+            <div class="text-gray-500 text-sm mb-6">No commitment. No sales pitch. Just a clear picture of what AI can do for your operations.</div>
+            <div class="text-xs text-gray-500 uppercase tracking-wider mb-3">How it works</div>
+            <div class="space-y-3 text-sm text-gray-500">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 bg-gray-100 rounded text-xs text-gray-500 flex items-center justify-center font-bold">1</span>
+                30-minute intake call to understand your situation
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 bg-gray-100 rounded text-xs text-gray-500 flex items-center justify-center font-bold">2</span>
+                We review your current workflows and systems
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 bg-gray-100 rounded text-xs text-gray-500 flex items-center justify-center font-bold">3</span>
+                Deliver blueprint document within 5 business days
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 bg-gray-100 rounded text-xs text-gray-500 flex items-center justify-center font-bold">4</span>
+                Review together — you decide whether to proceed
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200"></div>
+
+        <!-- Phase 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 bg-electric-500/10 border border-electric-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-bold text-electric-400">02</span>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Weeks 3-8</div>
+                <h2 class="text-2xl font-bold text-gray-900">Scoped Pilot</h2>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              One use case. Fixed price. Defined success criteria agreed in writing before we start.
+              We build a working prototype in 2 weeks, then spend the remaining time hardening,
+              testing, and preparing for production handoff.
+            </p>
+            <div class="space-y-3">
+              <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wider">What we deliver</h3>
+              {[
+                'Working prototype within 2 weeks of kickoff',
+                'Integration with your existing systems (Oracle, SAP, Tally, etc.)',
+                'User acceptance testing with your team',
+                'Performance metrics baseline established',
+                'Go/no-go criteria evaluated and documented',
+              ].map((item) => (
+                <div class="flex items-start gap-2 text-sm text-gray-500">
+                  <svg class="w-4 h-4 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="card border-electric-500/10">
+            <div class="text-xs font-semibold text-electric-400 uppercase tracking-wider mb-3">Pricing</div>
+            <div class="text-4xl font-bold text-gray-900 mb-1">Rs 3-8 Lakh</div>
+            <div class="text-gray-500 text-sm mb-1">Fixed price. Scope agreed before contract signed.</div>
+            <div class="text-xs text-gray-500 mb-6">Exact price depends on system complexity and integrations required.</div>
+
+            <div class="bg-electric-500/5 border border-electric-500/10 rounded-lg p-4 mb-4">
+              <div class="text-electric-400 text-xs font-semibold uppercase tracking-wider mb-2">Risk Reversal</div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                If the pilot does not meet agreed success criteria, we keep working until it does — at no extra cost.
+              </p>
+            </div>
+
+            <div class="text-xs text-gray-500 uppercase tracking-wider mb-3">Success criteria examples</div>
+            <div class="space-y-2 text-sm text-gray-500">
+              <div>Invoice processing time under 5 minutes per document</div>
+              <div>3-way match accuracy above 95%</div>
+              <div>Zero manual data entry for standard invoices</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200"></div>
+
+        <!-- Phase 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 bg-electric-500/10 border border-electric-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-bold text-electric-400">03</span>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Weeks 8-10</div>
+                <h2 class="text-2xl font-bold text-gray-900">Production Handoff</h2>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              We deploy to your infrastructure, train your team, and hand over complete documentation.
+              You own everything — code, workflows, credentials, documentation. No dependency on us to keep it running.
+            </p>
+            <div class="space-y-3">
+              <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wider">What we deliver</h3>
+              {[
+                'Production deployment to your infrastructure',
+                'System runbooks and operational documentation',
+                'Team training sessions (hands-on, not just slides)',
+                'Monitoring and alerting setup',
+                'Handover of all source code and credentials',
+              ].map((item) => (
+                <div class="flex items-start gap-2 text-sm text-gray-500">
+                  <svg class="w-4 h-4 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="card border-electric-500/10">
+            <div class="text-xs font-semibold text-electric-400 uppercase tracking-wider mb-3">Included in pilot price</div>
+            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+              Production handoff is not a separate cost. It is part of every pilot.
+              We do not consider the engagement complete until your team can operate the system without us.
+            </p>
+            <div class="bg-white/50 rounded-lg p-4 border border-gray-200">
+              <div class="text-gray-900 text-sm font-medium mb-2">What "your infrastructure" means</div>
+              <div class="space-y-1.5 text-sm text-gray-500">
+                <div>Your cloud account (AWS, Azure, GCP)</div>
+                <div>Your on-premise servers if required</div>
+                <div>Your existing databases and ERP systems</div>
+                <div>Your VPN and security perimeter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200"></div>
+
+        <!-- Phase 4 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 bg-electric-500/10 border border-electric-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-bold text-electric-400">04</span>
+              </div>
+              <div>
+                <div class="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Month 3 onward</div>
+                <h2 class="text-2xl font-bold text-gray-900">Ongoing Partnership</h2>
+              </div>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-6">
+              Once the first system is live, we shift to a monthly retainer. This covers maintenance,
+              optimization, issue resolution, and identifying the next automation opportunity.
+              You get a dedicated technical partner who knows your systems deeply.
+            </p>
+            <div class="space-y-3">
+              <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wider">What is included monthly</h3>
+              {[
+                'System monitoring and proactive issue resolution',
+                'Performance optimization and fine-tuning',
+                'Monthly business review with metrics report',
+                'Scoping next automation opportunity',
+                'Priority support for production incidents',
+              ].map((item) => (
+                <div class="flex items-start gap-2 text-sm text-gray-500">
+                  <svg class="w-4 h-4 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="card border-electric-500/10">
+            <div class="text-xs font-semibold text-electric-400 uppercase tracking-wider mb-3">Pricing</div>
+            <div class="text-4xl font-bold text-gray-900 mb-1">Rs 50K-1.5L</div>
+            <div class="text-gray-500 text-sm mb-6">Per month. Depends on number of systems and support scope.</div>
+            <div class="text-xs text-gray-500 uppercase tracking-wider mb-3">Why retainer, not project?</div>
+            <div class="space-y-3 text-sm text-gray-500">
+              <div class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-electric-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                AI systems need continuous improvement, not just one-time builds
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-electric-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Retainer incentivizes us to keep your systems working, not to find new problems to bill
+              </div>
+              <div class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-electric-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Predictable cost for your budget planning
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SUMMARY -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Pricing At a Glance</h2>
+        <p class="text-gray-500">No hourly billing. No retainers before you see results. Clear numbers from day one.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        {[
+          {
+            phase: 'Discovery',
+            price: 'Free',
+            duration: 'Weeks 1-2',
+            desc: 'Workflow audit, opportunity mapping, ROI estimate, and pilot recommendation.',
+          },
+          {
+            phase: 'Scoped Pilot',
+            price: 'Rs 3-8 Lakh',
+            duration: 'Weeks 3-10',
+            desc: 'Fixed-price build to production with success criteria, training, and full handover.',
+            featured: true,
+          },
+          {
+            phase: 'Monthly Retainer',
+            price: 'Rs 50K-1.5L',
+            duration: 'Per month',
+            desc: 'Maintenance, optimization, support, and next automation scoping.',
+          },
+        ].map((tier) => (
+          <div class={`card text-center ${tier.featured ? 'border-electric-500/30 bg-gradient-to-b from-navy-700 to-navy-800' : ''}`}>
+            {tier.featured && (
+              <div class="text-electric-400 text-xs font-semibold uppercase tracking-wider mb-3">Most Common Start</div>
+            )}
+            <div class="text-gray-500 text-sm mb-2">{tier.phase}</div>
+            <div class="text-2xl font-bold text-gray-900 mb-1">{tier.price}</div>
+            <div class="text-electric-400 text-xs mb-4">{tier.duration}</div>
+            <p class="text-gray-500 text-sm leading-relaxed">{tier.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- RISK REVERSAL -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      <div class="card border-electric-400/20 max-w-3xl mx-auto text-center p-8 sm:p-12">
+        <div class="w-12 h-12 bg-electric-500/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+          <svg class="w-6 h-6 text-electric-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          Our Guarantee
+        </h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+          If the pilot does not meet agreed success criteria, we continue working
+          until it does — at no extra cost.
+        </p>
+        <p class="text-gray-500 text-sm">
+          Success criteria are defined and agreed in writing before the engagement starts.
+          No moving goalposts. No ambiguity about what "done" means.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-padding bg-gray-50 border-t border-gray-200">
+    <div class="container-narrow text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+        Start With the Free Blueprint
+      </h2>
+      <p class="text-gray-500 max-w-xl mx-auto mb-8 leading-relaxed">
+        No commitment. No sales pitch. Just a clear picture of what AI automation can do
+        for your operations — and what it would cost to get there.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/blueprint/" class="btn-primary">
+          Get Free Blueprint
+        </a>
+        <a href="/contact/" class="btn-secondary">
+          Talk to Us First
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>

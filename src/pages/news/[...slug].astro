@@ -1,0 +1,170 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('news');
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+
+// Get related articles (other articles, sorted by date, take up to 3)
+const allArticles = await getCollection('news');
+const relatedArticles = allArticles
+  .filter((a) => a.id !== article.id)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-IN', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+const schema: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'NewsArticle',
+  headline: article.data.title,
+  description: article.data.description,
+  datePublished: article.data.date.toISOString(),
+  ...(article.data.image ? { image: article.data.image } : {}),
+  author: {
+    '@type': 'Organization',
+    name: 'Anomalies.in',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Anomalies.in',
+  },
+};
+---
+
+<Base
+  title={article.data.title}
+  description={article.data.description}
+  type="article"
+  publishedDate={article.data.date.toISOString()}
+  schema={schema}
+>
+  <!-- Breadcrumb -->
+  <div class="border-b border-gray-200">
+    <div class="container-narrow py-4">
+      <nav class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+        <span>/</span>
+        <a href="/news/" class="hover:text-gray-900 transition-colors">News</a>
+        <span>/</span>
+        <span class="text-gray-500 truncate">{article.data.title}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Article Header -->
+  <section class="section-padding border-b border-gray-200">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-4 mb-6">
+          <time
+            datetime={article.data.date.toISOString()}
+            class="text-sm text-gray-500"
+          >
+            {formatDate(article.data.date)}
+          </time>
+          <span class="text-gray-700">·</span>
+          <span class="text-sm text-gray-500">{article.data.author}</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          {article.data.title}
+        </h1>
+
+        <p class="text-xl text-gray-500 leading-relaxed">
+          {article.data.description}
+        </p>
+
+        {article.data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-2 mt-6">
+            {article.data.tags.map((tag) => (
+              <span class="text-xs text-gray-500 px-2.5 py-1 rounded bg-gray-100">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <div class="prose prose prose-lg max-w-none
+          prose-headings:text-gray-900 prose-headings:font-semibold
+          prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-200 prose-h2:pb-4
+          prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-electric-500
+          prose-p:text-gray-500 prose-p:leading-relaxed
+          prose-strong:text-gray-900 prose-strong:font-semibold
+          prose-li:text-gray-500
+          prose-ol:text-gray-500
+          prose-ul:text-gray-500
+          prose-a:text-electric-400 prose-a:no-underline hover:prose-a:underline
+          prose-hr:border-gray-200
+          prose-blockquote:border-l-electric-500 prose-blockquote:text-gray-500">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Articles -->
+  {relatedArticles.length > 0 && (
+    <section class="section-padding border-t border-gray-200">
+      <div class="container-narrow">
+        <h2 class="text-xl font-semibold text-gray-900 mb-6">More from Anomalies.in</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {relatedArticles.map((related) => (
+            <a href={`/news/${related.id}/`} class="card group block">
+              <time
+                datetime={related.data.date.toISOString()}
+                class="text-xs text-gray-500 block mb-3"
+              >
+                {formatDate(related.data.date)}
+              </time>
+              <h3 class="text-base font-semibold text-gray-900 group-hover:text-electric-400 transition-colors duration-200 leading-snug mb-3">
+                {related.data.title}
+              </h3>
+              <p class="text-sm text-gray-500 leading-relaxed line-clamp-2">
+                {related.data.description}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="section-padding border-t border-gray-200">
+    <div class="container-narrow">
+      <div class="card text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to implement this in your organisation?</h2>
+        <p class="text-gray-500 mb-8">
+          We scope every engagement around a defined business outcome and a 90-day delivery window.
+          One call is enough to know if there is a fit.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn-primary">Talk to us</a>
+          <a href="/case-studies/" class="btn-secondary">See our work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

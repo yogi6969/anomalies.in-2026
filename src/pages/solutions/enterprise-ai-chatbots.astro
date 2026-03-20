@@ -1,0 +1,312 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = "Enterprise AI Chatbots — Teams & WhatsApp Bots for Your Knowledge Base";
+const description = "AI chatbots inside Microsoft Teams and WhatsApp that answer questions from your company documents — SOPs, policies, PO status.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Enterprise AI Chatbots — Microsoft Teams & WhatsApp",
+  "provider": {
+    "@type": "Organization",
+    "name": "Anomalies.in",
+    "url": "https://anomalies.in"
+  },
+  "description": "AI chatbots deployed inside Microsoft Teams and WhatsApp for enterprise knowledge retrieval, SOP queries, and ERP status lookups.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "serviceType": "Enterprise AI Chatbots",
+  "url": "https://anomalies.in/solutions/enterprise-ai-chatbots/"
+};
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Breadcrumb -->
+  <div class="bg-white border-b border-gray-200">
+    <div class="container-narrow py-3">
+      <nav class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="/" class="hover:text-electric-400 transition-colors">Home</a>
+        <span>/</span>
+        <a href="/solutions/" class="hover:text-electric-400 transition-colors">Solutions</a>
+        <span>/</span>
+        <span class="text-gray-700">Enterprise AI Chatbots</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-400 text-sm font-medium mb-6">
+          Enterprise AI Chatbots
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Your SOPs exist.
+          <span class="gradient-text"> Nobody reads them.</span>
+        </h1>
+        <p class="text-xl text-gray-500 mb-4">
+          AI chatbots inside Microsoft Teams and WhatsApp that answer questions from your company documents — instantly, accurately, and only from your approved content.
+        </p>
+        <p class="text-lg text-gray-500">
+          "What's the leave policy?" "What's the status of PO-2024-3847?" "What's the onboarding checklist for a new vendor?" Answered in seconds without calling anyone.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+          <a href="/contact/" class="btn-primary">
+            Get a Scoped Proposal
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">The knowledge accessibility problem</h2>
+        <p class="text-gray-500 mb-10">Your company has accumulated years of documentation. None of it is accessible when employees actually need it.</p>
+        <div class="space-y-5">
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Employees can't find answers without calling someone — SOPs exist but no one reads them."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"ERP queries require training — 'What's the status of PO-2024-3847?' shouldn't require SAP access."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"New employees take weeks to learn company processes because knowledge is scattered across shared drives and email."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"HR and IT support teams spend 60% of their time answering the same questions."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Build -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">What we build</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">An AI assistant that lives where your employees already work — Teams or WhatsApp — and answers questions exclusively from your approved company documents. No hallucinations. No training required.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">MICROSOFT TEAMS</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Teams bot that appears as a contact</h3>
+          <p class="text-gray-500 text-sm mb-4">Deployed inside your existing Microsoft Teams tenant. Employees message it the same way they message a colleague. No new apps, no new logins. Works in direct message and in channels.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Deployed via Azure Bot Service (F0 free tier)</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Appears in Teams as an approved app</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Supports DMs and channel mentions</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> SSO with existing Azure AD accounts</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">WHATSAPP</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">WhatsApp bot for external stakeholders</h3>
+          <p class="text-gray-500 text-sm mb-4">For vendors, partners, and stakeholders outside your organisation. Query PO status, invoice status, or policy information via WhatsApp — no ERP access required, no portal to log into.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> WhatsApp Business API integration</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Vendor self-service for invoice status</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Multi-language support for Indian enterprise</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Escalation to human when needed</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">RAG ARCHITECTURE</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Answers only from your documents</h3>
+          <p class="text-gray-500 text-sm mb-4">Retrieval-Augmented Generation (RAG) ensures the bot answers exclusively from your approved document corpus. It never fabricates. When the answer isn't in your documents, it says so.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Document types: SOPs, policies, FAQs, HR handbooks</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Product manuals, compliance documents</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Source citation with every answer</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Automatic index updates when docs change</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">ERP QUERY INTERFACE</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Live ERP lookups from natural language</h3>
+          <p class="text-gray-500 text-sm mb-4">"What's the status of PO-2024-3847?" — the bot queries SAP or Oracle EBS in real time and returns the answer. No SAP login required. No training on ERP navigation.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> PO status and approval state</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Invoice processing status</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> GRN confirmation and delivery status</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Vendor payment status</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Architecture Diagram -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+        <div class="text-electric-400 font-mono text-sm font-semibold mb-4">System Architecture</div>
+        <pre class="text-gray-700 font-mono text-sm leading-relaxed overflow-x-auto"><code>
+  USER CHANNELS
+  ┌──────────────────┐         ┌──────────────────┐
+  │ Microsoft Teams  │         │     WhatsApp      │
+  │  (Internal)      │         │  (Vendors/Ext.)  │
+  └────────┬─────────┘         └────────┬──────────┘
+           └──────────────┬─────────────┘
+                          │
+               ┌──────────▼──────────┐
+               │   n8n Orchestrator  │
+               │   (Query Router)    │
+               └──────────┬──────────┘
+                          │
+          ┌───────────────┼────────────────┐
+          │               │                │
+ ┌────────▼──────┐ ┌──────▼───────┐ ┌─────▼──────────┐
+ │  RAG Engine   │ │  ERP Query   │ │  Human Handoff  │
+ │               │ │  Interface   │ │  Escalation     │
+ │ Your Docs     │ │              │ │                 │
+ │ ┌───────────┐ │ │ Oracle EBS   │ │ Route to human  │
+ │ │Embeddings │ │ │ SAP          │ │ when confidence │
+ │ │Index      │ │ │ (ORDS/BAPI)  │ │ is low          │
+ │ └───────────┘ │ └──────────────┘ └─────────────────┘
+ └────────┬──────┘
+          │
+ ┌────────▼──────────────────────────────────────────┐
+ │               Document Corpus                     │
+ │  SOPs  |  Policies  |  HR  |  Manuals  |  FAQs   │
+ └───────────────────────────────────────────────────┘
+          │
+          ▼
+  AI Response → Source Cited → Back to User
+        </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">ROI you can show your CFO</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">Support ticket deflection and onboarding acceleration are the primary drivers — both measurable from week one.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">40–60%</div>
+          <div class="text-gray-900 font-semibold mb-2">Ticket Reduction</div>
+          <div class="text-gray-500 text-sm">Internal support tickets deflected by the AI bot</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-emerald mb-2">Days</div>
+          <div class="text-gray-900 font-semibold mb-2">Faster Onboarding</div>
+          <div class="text-gray-500 text-sm">New employees get answers instantly, not weeks of shadowing</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-cyan mb-2">24/7</div>
+          <div class="text-gray-900 font-semibold mb-2">Knowledge Access</div>
+          <div class="text-gray-500 text-sm">No waiting for someone to be available to answer</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">50%+</div>
+          <div class="text-gray-900 font-semibold mb-2">IT/HR Load Reduction</div>
+          <div class="text-gray-500 text-sm">Repetitive queries handled by the bot, not the team</div>
+        </div>
+      </div>
+      <div class="bg-white border border-electric-500/20 rounded-xl p-6">
+        <p class="text-gray-700 text-sm leading-relaxed">
+          <span class="text-electric-400 font-semibold">On the HR support cost:</span> An HR team member handling 40 policy queries/week at 5 minutes each is spending 200 minutes/week — 3+ hours — answering questions that don't require human judgment. At Rs 60,000–80,000/month, that's Rs 4,000–5,000/month in HR time spent on repetitive queries. A bot costs a fraction of that and handles it at 2am on Sunday.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Technology used</h2>
+      <p class="text-gray-500 mb-10">Standard enterprise tools. No new platforms to manage. Deploys into your existing Microsoft and WhatsApp tenants.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Microsoft Teams SDK</div>
+            <div class="text-gray-500 text-sm">Native Teams bot deployment and integration</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Azure Bot Service</div>
+            <div class="text-gray-500 text-sm">F0 free tier for most enterprise deployments</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">RAG with Embeddings</div>
+            <div class="text-gray-500 text-sm">Vector search over your document corpus</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">WhatsApp Business API</div>
+            <div class="text-gray-500 text-sm">External stakeholder bot channel</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">n8n</div>
+            <div class="text-gray-500 text-sm">Query routing, ERP integration, and orchestration</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Oracle ORDS / SAP BAPI</div>
+            <div class="text-gray-500 text-sm">Live ERP data for PO and invoice status queries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Solutions -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <a href="/solutions/invoice-automation/" class="card group hover:border-electric-500/50">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED</div>
+          <h3 class="text-gray-900 font-bold text-lg mb-2 group-hover:text-electric-400 transition-colors">Invoice Automation</h3>
+          <p class="text-gray-500 text-sm">Automate invoice processing so your chatbot can answer vendor status queries in real time.</p>
+        </a>
+        <a href="/solutions/erp-integration/" class="card group hover:border-electric-500/50">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED</div>
+          <h3 class="text-gray-900 font-bold text-lg mb-2 group-hover:text-electric-400 transition-colors">ERP Integration</h3>
+          <p class="text-gray-500 text-sm">The live Oracle EBS and SAP data layer that powers PO status queries inside your chatbot.</p>
+        </a>
+        <a href="/solutions/agentic-workflows/" class="card group hover:border-electric-500/50">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED</div>
+          <h3 class="text-gray-900 font-bold text-lg mb-2 group-hover:text-electric-400 transition-colors">Agentic Workflows</h3>
+          <p class="text-gray-500 text-sm">Autonomous approval and onboarding workflows that integrate with your chatbot for status queries.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get a scoped proposal for enterprise AI chatbots</h2>
+        <p class="text-gray-500 mb-8">We scope against your document types, deployment channel (Teams or WhatsApp), and ERP integration requirements. You get a fixed-scope proposal with expected ticket deflection rates.</p>
+        <a href="/contact/" class="btn-primary text-lg px-8 py-4">
+          Get a Scoped Proposal for Enterprise AI Chatbots
+        </a>
+        <p class="text-gray-500 text-sm mt-4">Typically scoped in 2–3 business days after a discovery call.</p>
+      </div>
+    </div>
+  </section>
+
+</Base>

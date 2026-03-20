@@ -1,0 +1,320 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = "ERP Integration — Connect Oracle EBS & SAP to AI Automation";
+const description = "Pull procurement data from Oracle EBS and SAP into automated workflows. Real-time visibility without manual extraction.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "ERP Integration — Oracle EBS & SAP",
+  "provider": {
+    "@type": "Organization",
+    "name": "Anomalies.in",
+    "url": "https://anomalies.in"
+  },
+  "description": "Oracle EBS and SAP integration with AI automation workflows for Indian enterprise procurement and MIS.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "serviceType": "ERP Integration",
+  "url": "https://anomalies.in/solutions/erp-integration/"
+};
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Breadcrumb -->
+  <div class="bg-white border-b border-gray-200">
+    <div class="container-narrow py-3">
+      <nav class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="/" class="hover:text-electric-400 transition-colors">Home</a>
+        <span>/</span>
+        <a href="/solutions/" class="hover:text-electric-400 transition-colors">Solutions</a>
+        <span>/</span>
+        <span class="text-gray-700">ERP Integration</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-400 text-sm font-medium mb-6">
+          ERP Integration
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Your ERP has the data.
+          <span class="gradient-text"> Nobody can get to it.</span>
+        </h1>
+        <p class="text-xl text-gray-500 mb-4">
+          Oracle EBS and SAP integration that feeds live procurement data into automation workflows — without waiting for a DBA to run a report.
+        </p>
+        <p class="text-lg text-gray-500">
+          Real-time MIS, automated PO tracking, and bi-directional sync between your ERP and every downstream system that needs that data.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+          <a href="/contact/" class="btn-primary">
+            Get a Scoped Proposal
+          </a>
+          <a href="/case-studies/oracle-ebs-procurement-automation/" class="btn-secondary">
+            See the Case Study
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">The ERP visibility problem</h2>
+        <p class="text-gray-500 mb-10">Data exists in your ERP. Getting it out — and keeping it current — is the problem your teams live with every day.</p>
+        <div class="space-y-5">
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Our data lives in SAP/Oracle, but extracting it requires manual reports that are already stale by the time they're shared."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Month-end MIS takes 5–7 business days to compile from multiple systems."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Integration between ERP and downstream systems relies on outdated custom middleware that nobody wants to touch."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"We can't get real-time procurement visibility without asking the DBA for a report — and then waiting 3 days."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Build -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">What we build</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">ERP integration using Oracle's and SAP's own API layers — no screen-scraping, no brittle workarounds, no custom middleware to maintain.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">ORACLE EBS</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">ORDS Integration</h3>
+          <p class="text-gray-500 text-sm mb-4">Oracle REST Data Services is Oracle's own API layer — built into EBS. We configure ORDS endpoints to expose the procurement data your workflows need, then connect them to n8n automation pipelines.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Purchase Orders and Purchase Requisitions</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Goods Receipt Notes and Service Receipt Notes</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Vendor master data and payment terms</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> AP invoice status and posting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">SAP</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">RFC / BAPI Connectors</h3>
+          <p class="text-gray-500 text-sm mb-4">SAP's standard BAPI (Business API) connectors accessed via RFC. We expose procurement data through a clean REST layer that your automation workflows consume in real time.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> MM module: PO, GR, SES data</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> FI module: AP invoices and payment runs</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Vendor master synchronisation</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Budget and commitment reporting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">PIPELINES</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Automated procurement data pipelines</h3>
+          <p class="text-gray-500 text-sm">Scheduled and event-driven pipelines that pull PO, PR, GRN, and SRN data from your ERP and push it to downstream systems — dashboards, approval tools, audit logs, and finance reports.</p>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">MIS</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Real-time MIS generation</h3>
+          <p class="text-gray-500 text-sm">MIS reports generated automatically from live ERP data. Finance leadership gets the report pushed to them on schedule — no compilation, no manual extraction, no waiting.</p>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">SYNC</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Bi-directional ERP sync</h3>
+          <p class="text-gray-500 text-sm">Not just read-only. Approved invoices, vendor updates, and workflow decisions flow back into the ERP. No re-keying, no duplicate entry.</p>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">DASHBOARDS</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Live procurement dashboards</h3>
+          <p class="text-gray-500 text-sm">Custom dashboards pulling live ERP data. Open POs, pending GRNs, overdue payments, vendor spend by category — always current, always accessible.</p>
+        </div>
+      </div>
+
+      <!-- Architecture Diagram -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+        <div class="text-electric-400 font-mono text-sm font-semibold mb-4">Integration Architecture</div>
+        <pre class="text-gray-700 font-mono text-sm leading-relaxed overflow-x-auto"><code>
+  ┌──────────────────┐      ┌──────────────────┐
+  │   Oracle EBS     │      │      SAP         │
+  │                  │      │                  │
+  │  ┌────────────┐  │      │  ┌────────────┐  │
+  │  │    ORDS    │  │      │  │  RFC/BAPI  │  │
+  │  │  (REST)    │  │      │  │  Layer     │  │
+  │  └─────┬──────┘  │      │  └─────┬──────┘  │
+  └────────┼─────────┘      └────────┼─────────┘
+           │                         │
+           └────────────┬────────────┘
+                        │
+               ┌────────▼────────┐
+               │   n8n Pipeline  │
+               │  Orchestrator   │
+               └────────┬────────┘
+                        │
+        ┌───────────────┼───────────────┐
+        │               │               │
+┌───────▼──────┐ ┌──────▼───────┐ ┌────▼──────────┐
+│  Real-time   │ │  Automated   │ │  Bi-directional│
+│  MIS Reports │ │  Dashboards  │ │  Sync & Posting│
+└──────────────┘ └──────────────┘ └────────────────┘
+        │               │               │
+        ▼               ▼               ▼
+  Finance Email   Google Sheets    Invoice/Vendor
+  Distribution    Live View        Updates → ERP
+        </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">ROI you can show your CFO</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">Integration that pays for itself in the first reporting cycle.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">Real-time</div>
+          <div class="text-gray-900 font-semibold mb-2">MIS Availability</div>
+          <div class="text-gray-500 text-sm">Down from 5–7 business days of manual compilation</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-emerald mb-2">0</div>
+          <div class="text-gray-900 font-semibold mb-2">Manual Extractions</div>
+          <div class="text-gray-500 text-sm">All data pulled automatically via API pipelines</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-cyan mb-2">Live</div>
+          <div class="text-gray-900 font-semibold mb-2">Report Freshness</div>
+          <div class="text-gray-500 text-sm">Was weeks-old. Now reflects current ERP state.</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">60%</div>
+          <div class="text-gray-900 font-semibold mb-2">Maintenance Drop</div>
+          <div class="text-gray-500 text-sm">Integration maintenance vs custom middleware</div>
+        </div>
+      </div>
+      <div class="bg-white border border-electric-500/20 rounded-xl p-6">
+        <p class="text-gray-700 text-sm leading-relaxed">
+          <span class="text-electric-400 font-semibold">On the hidden cost:</span> A Finance analyst spending 5 days compiling MIS every month is spending 60 days/year on a task that should be automated. At Rs 80,000–1.2L/month, that's Rs 16–24L/year in analyst time spent on data assembly, not analysis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Technology used</h2>
+      <p class="text-gray-500 mb-10">Standard protocols, vendor-native API layers. No proprietary connectors that become liabilities.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Oracle ORDS</div>
+            <div class="text-gray-500 text-sm">Oracle's native REST API layer for EBS</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">SAP RFC / BAPI</div>
+            <div class="text-gray-500 text-sm">Standard SAP connectors for MM and FI modules</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">n8n</div>
+            <div class="text-gray-500 text-sm">Pipeline orchestration and scheduling</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">REST APIs</div>
+            <div class="text-gray-500 text-sm">Clean abstraction layer between ERP and workflows</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Google Sheets</div>
+            <div class="text-gray-500 text-sm">Live reporting layer, accessible to all stakeholders</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Webhooks / Polling</div>
+            <div class="text-gray-500 text-sm">Event-driven and scheduled pipeline triggers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study + Related Solutions -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white border border-electric-500/30 rounded-xl p-8">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-3">CASE STUDY</div>
+          <h3 class="text-gray-900 text-xl font-bold mb-3">Oracle EBS Procurement Automation</h3>
+          <p class="text-gray-500 text-sm mb-6">How we connected Oracle EBS procurement data to automated AP workflows, eliminating manual MIS compilation and enabling real-time visibility.</p>
+          <a href="/case-studies/oracle-ebs-procurement-automation/" class="btn-secondary text-sm">
+            Read the Case Study →
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-8">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED SOLUTIONS</div>
+          <div class="space-y-4">
+            <a href="/solutions/invoice-automation/" class="block group">
+              <div class="text-gray-900 font-semibold group-hover:text-electric-400 transition-colors">Invoice Automation</div>
+              <div class="text-gray-500 text-sm">AI OCR, GST validation, and 3-way matching</div>
+            </a>
+            <div class="border-t border-gray-200"></div>
+            <a href="/solutions/agentic-workflows/" class="block group">
+              <div class="text-gray-900 font-semibold group-hover:text-electric-400 transition-colors">Agentic Workflows</div>
+              <div class="text-gray-500 text-sm">Approval chains, vendor onboarding, MIS automation</div>
+            </a>
+            <div class="border-t border-gray-200"></div>
+            <a href="/solutions/enterprise-ai-chatbots/" class="block group">
+              <div class="text-gray-900 font-semibold group-hover:text-electric-400 transition-colors">Enterprise AI Chatbots</div>
+              <div class="text-gray-500 text-sm">Query ERP status via Teams or WhatsApp</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get a scoped proposal for ERP integration</h2>
+        <p class="text-gray-500 mb-8">We scope against your specific ERP version, module configuration, and data requirements. You get a fixed-scope proposal with timeline and expected outcomes — before any commitment.</p>
+        <a href="/contact/" class="btn-primary text-lg px-8 py-4">
+          Get a Scoped Proposal for ERP Integration
+        </a>
+        <p class="text-gray-500 text-sm mt-4">Typically scoped in 2–3 business days after a discovery call.</p>
+      </div>
+    </div>
+  </section>
+
+</Base>

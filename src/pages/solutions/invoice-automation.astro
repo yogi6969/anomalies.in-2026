@@ -1,0 +1,330 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = "Invoice & Document Automation — AI-Powered OCR for Indian Enterprise";
+const description = "Automate invoice processing with AI OCR, GST validation, and 3-way matching. Reduce processing from 15 days to 2 days.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Invoice & Document Automation",
+  "provider": {
+    "@type": "Organization",
+    "name": "Anomalies.in",
+    "url": "https://anomalies.in"
+  },
+  "description": "AI-powered invoice processing with OCR, GST validation, and 3-way matching for Indian enterprise.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "serviceType": "Invoice Automation",
+  "url": "https://anomalies.in/solutions/invoice-automation/"
+};
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Breadcrumb -->
+  <div class="bg-white border-b border-gray-200">
+    <div class="container-narrow py-3">
+      <nav class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="/" class="hover:text-electric-400 transition-colors">Home</a>
+        <span>/</span>
+        <a href="/solutions/" class="hover:text-electric-400 transition-colors">Solutions</a>
+        <span>/</span>
+        <span class="text-gray-700">Invoice Automation</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-400 text-sm font-medium mb-6">
+          Invoice & Document Automation
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Stop paying people to move
+          <span class="gradient-text"> PDFs between inboxes</span>
+        </h1>
+        <p class="text-xl text-gray-500 mb-4">
+          AI-powered invoice processing with OCR, GST validation, and 3-way matching — built for Indian enterprise workflows.
+        </p>
+        <p class="text-lg text-gray-500">
+          Your AP team is buried in vendor emails, WhatsApp forwards, and month-end chaos. We replace that with an automated pipeline that processes invoices in minutes, not days.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+          <a href="/contact/" class="btn-primary">
+            Get a Scoped Proposal
+          </a>
+          <a href="/case-studies/lighthouse-learning-invoice-ocr/" class="btn-secondary">
+            See the Case Study
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">What your team is dealing with right now</h2>
+        <p class="text-gray-500 mb-10">These are the exact words VPs of Finance and Procurement use when describing their AP process:</p>
+        <div class="space-y-5">
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Our team spends 5–7 days just collecting invoices from vendors via email, WhatsApp, and paper."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Three-way matching between POs, GRNs, and invoices is done manually in Excel."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Month-end is chaos — we miss discrepancies, GST numbers don't match, vendor disputes pile up."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"We have 3–8 people doing work that should take minutes."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Build -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">What we build</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">A fully automated invoice pipeline from intake to ERP posting. Every step is logged, auditable, and configurable to your approval rules.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div class="space-y-4">
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">01 — INTAKE</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">Universal invoice collection</h3>
+            <p class="text-gray-500 text-sm">Email (IMAP), WhatsApp, scanned PDFs, portal uploads. Any source, any format. Everything lands in one processing queue.</p>
+          </div>
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">02 — EXTRACTION</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">AI OCR with Gemini 2.5 Pro</h3>
+            <p class="text-gray-500 text-sm">Extracts all fields: vendor name, GSTIN, invoice number, line items, tax breakdowns, bank details. Works on handwritten, printed, and structured documents.</p>
+          </div>
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">03 — CLASSIFICATION</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">Automatic document categorisation</h3>
+            <p class="text-gray-500 text-sm">Tax Invoice, Utility Bill, Transport, Manpower, Service — automatically classified and routed to the right approval workflow.</p>
+          </div>
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">04 — VALIDATION</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">GSTIN verification and correction</h3>
+            <p class="text-gray-500 text-sm">Real-time GSTIN validation against the GST portal. Mismatches flagged before they become disputes or penalties.</p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">05 — MATCHING</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">6-check 3-way reconciliation engine</h3>
+            <p class="text-gray-500 text-sm">Invoice vs Purchase Order vs Goods Receipt Note. Six automated checks: vendor identity, amount, quantity, tax rate, PO validity, and GRN confirmation.</p>
+          </div>
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">06 — ROUTING</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">Intelligent approval routing</h3>
+            <p class="text-gray-500 text-sm">Clean invoices routed straight to ERP posting. Exceptions flagged with full context sent to the right approver — no email chains, no lost threads.</p>
+          </div>
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">07 — VISIBILITY</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">Real-time tracking dashboard</h3>
+            <p class="text-gray-500 text-sm">Every invoice has a status. Finance leadership sees what's in queue, what's approved, what's stuck — without asking anyone.</p>
+          </div>
+          <div class="card">
+            <div class="text-electric-400 font-mono text-sm font-semibold mb-2">08 — INTEGRATION</div>
+            <h3 class="text-gray-900 font-semibold text-lg mb-2">ERP posting</h3>
+            <p class="text-gray-500 text-sm">Approved invoices posted directly to Oracle EBS, SAP, or your ERP. No re-keying. No copy-paste errors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture Diagram -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+        <div class="text-electric-400 font-mono text-sm font-semibold mb-4">System Architecture</div>
+        <pre class="text-gray-700 font-mono text-sm leading-relaxed overflow-x-auto"><code>
+  INTAKE SOURCES
+  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+  │   Email     │  │  WhatsApp   │  │  Scan/PDF   │  │   Portal    │
+  │   (IMAP)   │  │  (API)      │  │  Upload     │  │   Upload    │
+  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘
+         └────────────────┴─────────────────┴─────────────────┘
+                                    │
+                           ┌────────▼────────┐
+                           │  n8n Workflow   │
+                           │  Orchestrator   │
+                           └────────┬────────┘
+                                    │
+                           ┌────────▼────────┐
+                           │  Gemini 2.5 Pro │
+                           │  AI OCR Engine  │
+                           └────────┬────────┘
+                                    │
+              ┌─────────────────────┼─────────────────────┐
+              │                     │                       │
+     ┌────────▼──────┐   ┌─────────▼──────┐   ┌──────────▼──────┐
+     │  GSTIN        │   │  3-Way Match   │   │  Classification  │
+     │  Validator    │   │  Engine        │   │  Engine          │
+     │               │   │  (6 checks)   │   │                  │
+     └────────┬──────┘   └─────────┬──────┘   └──────────┬──────┘
+              └─────────────────────┴─────────────────────┘
+                                    │
+                    ┌───────────────┴───────────────┐
+                    │                               │
+          ┌─────────▼──────┐             ┌──────────▼──────┐
+          │  AUTO-APPROVE  │             │  EXCEPTION QUEUE │
+          │  → ERP Post    │             │  → Human Review  │
+          └────────────────┘             └─────────────────┘
+        </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">ROI you can show your CFO</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">These are real numbers from production deployments, not optimistic projections.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">87%</div>
+          <div class="text-gray-900 font-semibold mb-2">Cost Reduction</div>
+          <div class="text-gray-500 text-sm">Rs 800–2,500 per invoice down to Rs 350–400</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-emerald mb-2">13x</div>
+          <div class="text-gray-900 font-semibold mb-2">Faster Cycle Time</div>
+          <div class="text-gray-500 text-sm">15-day process compressed to 2 days</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-cyan mb-2">80%</div>
+          <div class="text-gray-900 font-semibold mb-2">Labor Reduction</div>
+          <div class="text-gray-500 text-sm">For invoice handling and data entry work</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">100%</div>
+          <div class="text-gray-900 font-semibold mb-2">GST Validation</div>
+          <div class="text-gray-500 text-sm">Every GSTIN verified automatically before posting</div>
+        </div>
+      </div>
+      <div class="bg-white border border-electric-500/20 rounded-xl p-6">
+        <p class="text-gray-700 text-sm leading-relaxed">
+          <span class="text-electric-400 font-semibold">On payback:</span> A team of 4 people processing 300 invoices/month at Rs 60,000/month salary each represents Rs 2.4L/month in labour. At Rs 350–400 per invoice automated, the system cost is Rs 1.05–1.2L/month. Payback begins in month one.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Technology used</h2>
+      <p class="text-gray-500 mb-10">Enterprise-grade tools, no proprietary lock-in. You own the data and the workflows.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Gemini 2.5 Pro</div>
+            <div class="text-gray-500 text-sm">AI OCR and field extraction engine</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">n8n</div>
+            <div class="text-gray-500 text-sm">Workflow orchestration and automation</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">IMAP / Email APIs</div>
+            <div class="text-gray-500 text-sm">Email intake and attachment extraction</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Oracle EBS / SAP</div>
+            <div class="text-gray-500 text-sm">ERP integration for posting and PO data</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Google Sheets</div>
+            <div class="text-gray-500 text-sm">Reporting layer and exception dashboard</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">GST Portal APIs</div>
+            <div class="text-gray-500 text-sm">Real-time GSTIN validation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study + Related Solutions -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Case Study -->
+        <div class="bg-white border border-electric-500/30 rounded-xl p-8">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-3">CASE STUDY</div>
+          <h3 class="text-gray-900 text-xl font-bold mb-3">Lighthouse Learning — Invoice OCR Implementation</h3>
+          <p class="text-gray-500 text-sm mb-6">How we built a 3-workflow invoice automation system with Gemini OCR and Google Sheets PO matching for a growing education company.</p>
+          <a href="/case-studies/lighthouse-learning-invoice-ocr/" class="btn-secondary text-sm">
+            Read the Case Study →
+          </a>
+        </div>
+        <!-- Related Solutions -->
+        <div class="bg-white border border-gray-200 rounded-xl p-8">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED SOLUTIONS</div>
+          <div class="space-y-4">
+            <a href="/solutions/erp-integration/" class="block group">
+              <div class="text-gray-900 font-semibold group-hover:text-electric-400 transition-colors">ERP Integration</div>
+              <div class="text-gray-500 text-sm">Connect Oracle EBS and SAP to your automation workflows</div>
+            </a>
+            <div class="border-t border-gray-200"></div>
+            <a href="/solutions/agentic-workflows/" class="block group">
+              <div class="text-gray-900 font-semibold group-hover:text-electric-400 transition-colors">Agentic Workflows</div>
+              <div class="text-gray-500 text-sm">Autonomous approval chains, vendor onboarding, MIS generation</div>
+            </a>
+            <div class="border-t border-gray-200"></div>
+            <a href="/solutions/enterprise-ai-chatbots/" class="block group">
+              <div class="text-gray-900 font-semibold group-hover:text-electric-400 transition-colors">Enterprise AI Chatbots</div>
+              <div class="text-gray-500 text-sm">Teams and WhatsApp bots that answer questions from your documents</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get a scoped proposal for invoice automation</h2>
+        <p class="text-gray-500 mb-8">We scope against your actual invoice volume, vendor mix, and ERP. You get a fixed-scope proposal with implementation timeline and expected ROI — before any commitment.</p>
+        <a href="/contact/" class="btn-primary text-lg px-8 py-4">
+          Get a Scoped Proposal for Invoice Automation
+        </a>
+        <p class="text-gray-500 text-sm mt-4">Typically scoped in 2–3 business days after a discovery call.</p>
+      </div>
+    </div>
+  </section>
+
+</Base>

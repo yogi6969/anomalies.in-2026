@@ -1,0 +1,320 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = "Agentic AI Workflows — Autonomous Systems for Enterprise Operations";
+const description = "Multi-step AI agents that handle approvals, vendor onboarding, MIS generation, and exception routing — with human oversight.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Agentic AI Workflows for Enterprise",
+  "provider": {
+    "@type": "Organization",
+    "name": "Anomalies.in",
+    "url": "https://anomalies.in"
+  },
+  "description": "Multi-step autonomous AI workflows for procurement approvals, vendor onboarding, MIS generation, and exception routing for Indian enterprise.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "serviceType": "Agentic AI Workflows",
+  "url": "https://anomalies.in/solutions/agentic-workflows/"
+};
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Breadcrumb -->
+  <div class="bg-white border-b border-gray-200">
+    <div class="container-narrow py-3">
+      <nav class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="/" class="hover:text-electric-400 transition-colors">Home</a>
+        <span>/</span>
+        <a href="/solutions/" class="hover:text-electric-400 transition-colors">Solutions</a>
+        <span>/</span>
+        <span class="text-gray-700">Agentic Workflows</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-400 text-sm font-medium mb-6">
+          Agentic AI Workflows
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Approvals stuck in email chains
+          <span class="gradient-text"> are a solved problem.</span>
+        </h1>
+        <p class="text-xl text-gray-500 mb-4">
+          Multi-step autonomous AI workflows that handle approvals, vendor onboarding, MIS generation, and exception routing — with full human oversight where it matters.
+        </p>
+        <p class="text-lg text-gray-500">
+          Not simple if-then rules. Actual AI agents that understand context, make routing decisions, escalate intelligently, and maintain a complete audit trail of every action.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+          <a href="/contact/" class="btn-primary">
+            Get a Scoped Proposal
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Process breakdowns that cost real money</h2>
+        <p class="text-gray-500 mb-10">Every day an approval sits in an email chain, or a vendor waits on onboarding, is a day of working capital frozen.</p>
+        <div class="space-y-5">
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Purchase approvals are stuck in email chains — no one knows where the bottleneck is."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Vendor onboarding takes 14–30 days because of paper-based KYC and manual GSTIN verification."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"Escalation logic is informal — someone WhatsApps the VP when approvals are stuck."</p>
+          </div>
+          <div class="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
+            <div class="text-2xl mt-0.5">—</div>
+            <p class="text-gray-700 italic text-lg">"We have no SLA tracking on open approvals or pending processes."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Build -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">What we build</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">Autonomous multi-step workflows that run your operational processes with intelligence, not just automation. Every workflow includes human-in-the-loop design — you decide which decisions need human approval.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">APPROVAL WORKFLOWS</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Purchase approval chains with intelligent routing</h3>
+          <p class="text-gray-500 text-sm mb-4">Multi-level approval workflows that route based on amount, category, vendor type, and business rules. Automatic escalation when approvals stall. Complete audit trail of every decision and timestamp.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Amount-based approval thresholds</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Category and vendor-specific routing</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Auto-escalation on SLA breach</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Parallel approval where rules allow</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">VENDOR ONBOARDING</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Automated KYC and GSTIN verification</h3>
+          <p class="text-gray-500 text-sm mb-4">End-to-end vendor onboarding workflow. GSTIN verified against the GST portal. Bank details validated. Documents collected and classified. Vendor activated in ERP only after all checks pass.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> GSTIN real-time verification</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Bank account validation</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> KYC document collection and classification</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Automated ERP vendor creation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">MIS AUTOMATION</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Automated report generation and distribution</h3>
+          <p class="text-gray-500 text-sm mb-4">MIS reports assembled from live ERP data on your schedule. Daily, weekly, monthly — automatically generated and pushed to the right people without anyone touching a spreadsheet.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Scheduled generation from live data</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Automated email distribution</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Exception highlighting and alerts</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Cross-system data consolidation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">EXCEPTION HANDLING</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Human-in-the-loop exception routing</h3>
+          <p class="text-gray-500 text-sm mb-4">When the AI agent can't confidently decide, it routes to a human with full context — not just a notification, but everything needed to make the decision in seconds. The agent resumes from where it left off.</p>
+          <ul class="space-y-1 text-sm text-gray-500">
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Context-rich exception alerts</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> One-click approval from WhatsApp or email</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> Automatic resume after human decision</li>
+            <li class="flex gap-2"><span class="text-electric-400">+</span> SLA tracking on exception resolution</li>
+          </ul>
+        </div>
+        <div class="card lg:col-span-2">
+          <div class="text-electric-400 font-mono text-sm font-semibold mb-2">SLA TRACKING</div>
+          <h3 class="text-gray-900 font-semibold text-lg mb-3">Complete process visibility and alerting</h3>
+          <p class="text-gray-500 text-sm">Every process instance has a status. Leadership sees what's in-flight, what's stalled, and where the bottleneck is — in real time. SLA breach alerts go to the right person before a deadline is missed.</p>
+        </div>
+      </div>
+
+      <!-- Architecture Diagram -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+        <div class="text-electric-400 font-mono text-sm font-semibold mb-4">Agentic Workflow Architecture</div>
+        <pre class="text-gray-700 font-mono text-sm leading-relaxed overflow-x-auto"><code>
+  TRIGGER
+  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+  │ Invoice     │  │ Vendor      │  │  Scheduled  │
+  │ Received    │  │ Application │  │  MIS Cycle  │
+  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘
+         └────────────────┴─────────────────┘
+                          │
+                 ┌────────▼────────┐
+                 │  n8n Agentic    │
+                 │  Orchestrator   │
+                 └────────┬────────┘
+                          │
+         ┌────────────────┼────────────────┐
+         │                │                │
+┌────────▼──────┐ ┌───────▼──────┐ ┌──────▼──────────┐
+│  Gemini AI    │ │  Validation  │ │  SLA Tracker    │
+│  Decision     │ │  Engine      │ │  + Escalation   │
+│  Engine       │ │  (GSTIN/KYC) │ │  Engine         │
+└────────┬──────┘ └───────┬──────┘ └──────┬──────────┘
+         └────────────────┴────────────────┘
+                          │
+          ┌───────────────┼───────────────┐
+          │               │               │
+ ┌────────▼──────┐ ┌──────▼───────┐ ┌────▼──────────┐
+ │   AUTO-ROUTE  │ │   HUMAN-IN-  │ │   ESCALATE    │
+ │   → ERP / MIS │ │   THE-LOOP   │ │   → VP via    │
+ │   → Approved  │ │   → WhatsApp │ │   WhatsApp    │
+ └───────────────┘ └──────────────┘ └───────────────┘
+                          │
+                 ┌────────▼────────┐
+                 │  Audit Log      │
+                 │  Every decision │
+                 │  timestamped    │
+                 └─────────────────┘
+        </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">ROI you can show your CFO</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl">Cycle time compression is the primary value driver. Every day shaved off a procurement cycle frees working capital.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">Same-day</div>
+          <div class="text-gray-900 font-semibold mb-2">Approval Cycle</div>
+          <div class="text-gray-500 text-sm">Down from 5–7 days stuck in email chains</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-emerald mb-2">3–5 days</div>
+          <div class="text-gray-900 font-semibold mb-2">Vendor Onboarding</div>
+          <div class="text-gray-500 text-sm">Down from 14–30 days of paper-based KYC</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-accent-cyan mb-2">Minutes</div>
+          <div class="text-gray-900 font-semibold mb-2">Escalation Response</div>
+          <div class="text-gray-500 text-sm">Automated alerts vs hours of WhatsApp chasing</div>
+        </div>
+        <div class="card text-center">
+          <div class="text-4xl font-bold text-electric-400 mb-2">100%</div>
+          <div class="text-gray-900 font-semibold mb-2">Audit Trail</div>
+          <div class="text-gray-500 text-sm">Every decision, every handoff, every timestamp</div>
+        </div>
+      </div>
+      <div class="bg-white border border-electric-500/20 rounded-xl p-6">
+        <p class="text-gray-700 text-sm leading-relaxed">
+          <span class="text-electric-400 font-semibold">On vendor onboarding:</span> A vendor sitting in onboarding for 30 days can't invoice. If that vendor delivers Rs 10L/month in goods or services, you have Rs 10L of value you can't book. Cutting onboarding from 30 days to 5 means that value lands in your books 25 days earlier — every month, for every new vendor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Technology used</h2>
+      <p class="text-gray-500 mb-10">Enterprise orchestration tools with AI decision intelligence layered on top.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">n8n</div>
+            <div class="text-gray-500 text-sm">Workflow orchestration, scheduling, and state management</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Gemini AI</div>
+            <div class="text-gray-500 text-sm">Decision intelligence and document classification</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">WhatsApp Business API</div>
+            <div class="text-gray-500 text-sm">Notifications, approval actions, and escalation alerts</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Google Sheets / ERP</div>
+            <div class="text-gray-500 text-sm">Data layer for workflows and audit logging</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">GST Portal APIs</div>
+            <div class="text-gray-500 text-sm">Real-time GSTIN verification for vendor onboarding</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 rounded-full bg-electric-400 mt-2 flex-shrink-0"></div>
+          <div>
+            <div class="text-gray-900 font-semibold">Email / Webhook Triggers</div>
+            <div class="text-gray-500 text-sm">Event-driven workflow initiation from any source</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Solutions -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <a href="/solutions/invoice-automation/" class="card group hover:border-electric-500/50">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED</div>
+          <h3 class="text-gray-900 font-bold text-lg mb-2 group-hover:text-electric-400 transition-colors">Invoice Automation</h3>
+          <p class="text-gray-500 text-sm">The document processing layer that feeds your approval workflows. AI OCR, GST validation, 3-way matching.</p>
+        </a>
+        <a href="/solutions/erp-integration/" class="card group hover:border-electric-500/50">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED</div>
+          <h3 class="text-gray-900 font-bold text-lg mb-2 group-hover:text-electric-400 transition-colors">ERP Integration</h3>
+          <p class="text-gray-500 text-sm">Connect Oracle EBS and SAP so your agentic workflows have live procurement data to act on.</p>
+        </a>
+        <a href="/solutions/enterprise-ai-chatbots/" class="card group hover:border-electric-500/50">
+          <div class="text-gray-500 font-mono text-sm font-semibold mb-3">RELATED</div>
+          <h3 class="text-gray-900 font-bold text-lg mb-2 group-hover:text-electric-400 transition-colors">Enterprise AI Chatbots</h3>
+          <p class="text-gray-500 text-sm">Let employees query approval status and process information via Teams or WhatsApp.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get a scoped proposal for agentic workflows</h2>
+        <p class="text-gray-500 mb-8">We scope against your specific process — procurement approvals, vendor onboarding, or MIS automation. You get a proposal with clear workflow design, timeline, and expected cycle time improvement.</p>
+        <a href="/contact/" class="btn-primary text-lg px-8 py-4">
+          Get a Scoped Proposal for Agentic Workflows
+        </a>
+        <p class="text-gray-500 text-sm mt-4">Typically scoped in 2–3 business days after a discovery call.</p>
+      </div>
+    </div>
+  </section>
+
+</Base>

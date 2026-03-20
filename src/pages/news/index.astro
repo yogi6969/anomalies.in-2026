@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const allArticles = await getCollection('news');
+const articles = allArticles.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-IN', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<Base
+  title="News & Insights"
+  description="Enterprise AI news, analysis, and insights for Indian technology leaders. Covering AI adoption, automation, and practical implementation guidance."
+>
+  <!-- Hero -->
+  <section class="section-padding border-b border-gray-200">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <p class="text-electric-400 text-sm font-medium tracking-widest uppercase mb-4">News & Insights</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Enterprise AI <span class="gradient-text">intelligence</span>
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed">
+          Analysis, research, and practical insights for VP and AVP technology leaders
+          navigating enterprise AI adoption in India.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      {articles.length === 0 ? (
+        <p class="text-gray-500 text-center py-16">No articles published yet. Check back soon.</p>
+      ) : (
+        <div class="grid gap-6">
+          {articles.map((article, index) => (
+            <a
+              href={`/news/${article.id}/`}
+              class={`card group block ${index === 0 ? 'border-electric-500/20' : ''}`}
+            >
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-3">
+                    <time
+                      datetime={article.data.date.toISOString()}
+                      class="text-xs text-gray-500"
+                    >
+                      {formatDate(article.data.date)}
+                    </time>
+                    {article.data.tags.slice(0, 2).map((tag) => (
+                      <span class="text-xs text-gray-500 px-2 py-0.5 rounded bg-gray-100">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h2 class={`font-semibold text-gray-900 group-hover:text-electric-400 transition-colors duration-200 mb-3 leading-snug ${index === 0 ? 'text-xl sm:text-2xl' : 'text-lg'}`}>
+                    {article.data.title}
+                  </h2>
+                  <p class="text-gray-500 leading-relaxed text-sm sm:text-base">
+                    {article.data.description}
+                  </p>
+                </div>
+                <div class="shrink-0 sm:mt-8">
+                  <span class="text-electric-400 text-sm font-medium group-hover:underline whitespace-nowrap">
+                    Read →
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Subscribe / CTA -->
+  <section class="section-padding border-t border-gray-200">
+    <div class="container-narrow">
+      <div class="card text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to move from reading to building?</h2>
+        <p class="text-gray-500 mb-8">
+          If you are a technology leader looking to deploy AI automation in your organisation,
+          we can scope an implementation in a single call.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn-primary">Talk to us</a>
+          <a href="/case-studies/" class="btn-secondary">See case studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

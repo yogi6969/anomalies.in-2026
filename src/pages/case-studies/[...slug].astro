@@ -1,0 +1,130 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('case-studies');
+  return caseStudies.map((study) => ({
+    params: { slug: study.id },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const { Content } = await render(study);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: study.data.title,
+  description: study.data.description,
+  author: {
+    '@type': 'Organization',
+    name: 'Anomalies.in',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Anomalies.in',
+  },
+};
+---
+
+<Base
+  title={study.data.title}
+  description={study.data.description}
+  type="article"
+  schema={schema}
+>
+  <!-- Breadcrumb -->
+  <div class="border-b border-gray-200">
+    <div class="container-narrow py-4">
+      <nav class="flex items-center gap-2 text-sm text-gray-500">
+        <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+        <span>/</span>
+        <a href="/case-studies/" class="hover:text-gray-900 transition-colors">Case Studies</a>
+        <span>/</span>
+        <span class="text-gray-500 truncate">{study.data.title}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <section class="section-padding border-b border-gray-200">
+    <div class="container-narrow">
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-electric-500/10 text-electric-400 border border-electric-500/20">
+            {study.data.industry}
+          </span>
+          <span class="text-sm text-gray-500">{study.data.client}</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          {study.data.title}
+        </h1>
+
+        <p class="text-xl text-gray-500 leading-relaxed mb-10">
+          {study.data.description}
+        </p>
+
+        <!-- Results metrics -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {study.data.results.map((result) => (
+            <div class="bg-electric-500/5 border border-electric-500/20 rounded-xl px-5 py-4">
+              <p class="text-sm font-medium text-electric-500 leading-snug">{result}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <div class="prose prose prose-lg max-w-none
+          prose-headings:text-gray-900 prose-headings:font-semibold
+          prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+          prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-electric-500
+          prose-p:text-gray-500 prose-p:leading-relaxed
+          prose-strong:text-gray-900 prose-strong:font-semibold
+          prose-li:text-gray-500
+          prose-ol:text-gray-500
+          prose-ul:text-gray-500
+          prose-a:text-electric-400 prose-a:no-underline hover:prose-a:underline
+          prose-hr:border-gray-200">
+          <Content />
+        </div>
+
+        <!-- Tags -->
+        {study.data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-2 mt-12 pt-8 border-t border-gray-200">
+            {study.data.tags.map((tag) => (
+              <span class="text-xs text-gray-500 px-2.5 py-1 rounded bg-gray-100">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding border-t border-gray-200">
+    <div class="container-narrow">
+      <div class="card text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Want similar results?</h2>
+        <p class="text-gray-500 mb-8">
+          We scope every engagement around a defined business outcome and a 90-day delivery window.
+          Let us show you what this could look like for your operations.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn-primary">Get your blueprint</a>
+          <a href="/case-studies/" class="btn-secondary">More case studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

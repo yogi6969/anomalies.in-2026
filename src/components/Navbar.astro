@@ -1,0 +1,95 @@
+---
+const navLinks = [
+  { href: '/solutions/invoice-automation/', label: 'Solutions', hasDropdown: true },
+  { href: '/case-studies/', label: 'Case Studies' },
+  { href: '/how-we-work/', label: 'How We Work' },
+  { href: '/news/', label: 'News' },
+  { href: '/about/', label: 'About' },
+];
+
+const solutionLinks = [
+  { href: '/solutions/invoice-automation/', label: 'Invoice & Document Automation' },
+  { href: '/solutions/erp-integration/', label: 'ERP Integration' },
+  { href: '/solutions/agentic-workflows/', label: 'Agentic AI Workflows' },
+  { href: '/solutions/enterprise-ai-chatbots/', label: 'Enterprise AI Chatbots' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200/50">
+  <div class="container-narrow">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2">
+        <img src="/logo.png" alt="Anomalies.in" class="w-7 h-7" />
+        <span class="text-xl font-bold text-gray-900">anomalies<span class="text-electric-400">.in</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <div class="relative group">
+            <a
+              href={link.href}
+              class="text-sm text-gray-500 hover:text-gray-900 transition-colors py-2"
+            >
+              {link.label}
+              {link.hasDropdown && (
+                <svg class="inline-block w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              )}
+            </a>
+            {link.hasDropdown && (
+              <div class="absolute top-full left-0 mt-1 w-64 bg-gray-50 border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                {solutionLinks.map((sl) => (
+                  <a href={sl.href} class="block px-4 py-2 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors">
+                    {sl.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA + Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="/blueprint/" class="hidden sm:inline-flex btn-primary text-sm">
+          Get Free Blueprint
+        </a>
+        <button id="mobile-toggle" class="lg:hidden p-2 text-gray-500 hover:text-gray-900" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-gray-50 border-t border-gray-200">
+    <div class="container-narrow py-4 space-y-2">
+      {navLinks.map((link) => (
+        <a href={link.href} class="block py-2 text-gray-500 hover:text-gray-900 transition-colors">
+          {link.label}
+        </a>
+      ))}
+      {solutionLinks.map((sl) => (
+        <a href={sl.href} class="block py-2 pl-4 text-sm text-gray-500 hover:text-gray-900 transition-colors">
+          {sl.label}
+        </a>
+      ))}
+      <a href="/blueprint/" class="block py-2 text-electric-400 font-medium">
+        Get Free Blueprint
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

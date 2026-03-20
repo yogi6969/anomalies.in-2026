@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const allCaseStudies = await getCollection('case-studies');
+const caseStudies = allCaseStudies.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base
+  title="Case Studies"
+  description="Real results from AI automation deployments across Indian enterprises. Invoice automation, ERP integration, and agentic workflow implementations."
+>
+  <!-- Hero -->
+  <section class="section-padding border-b border-gray-200">
+    <div class="container-narrow">
+      <div class="max-w-3xl">
+        <p class="text-electric-400 text-sm font-medium tracking-widest uppercase mb-4">Case Studies</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          Real results from <span class="gradient-text">real deployments</span>
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed">
+          Every engagement starts with a defined outcome and a 90-day delivery window.
+          Here is what that looks like in practice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Grid -->
+  <section class="section-padding">
+    <div class="container-narrow">
+      {caseStudies.length === 0 ? (
+        <p class="text-gray-500 text-center py-16">No case studies published yet. Check back soon.</p>
+      ) : (
+        <div class="grid gap-8">
+          {caseStudies.map((study) => (
+            <a
+              href={`/case-studies/${study.id}/`}
+              class="card group block hover:border-electric-500/50 transition-all duration-300"
+            >
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                <div>
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-electric-500/10 text-electric-400 border border-electric-500/20">
+                      {study.data.industry}
+                    </span>
+                    <span class="text-xs text-gray-500">{study.data.client}</span>
+                  </div>
+                  <h2 class="text-xl font-semibold text-gray-900 group-hover:text-electric-400 transition-colors duration-200">
+                    {study.data.title}
+                  </h2>
+                </div>
+                <div class="shrink-0">
+                  <span class="text-electric-400 text-sm font-medium group-hover:underline">
+                    Read case study →
+                  </span>
+                </div>
+              </div>
+
+              <p class="text-gray-500 mb-6 leading-relaxed">
+                {study.data.description}
+              </p>
+
+              <!-- Results metrics -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                {study.data.results.map((result) => (
+                  <div class="bg-white/60 border border-gray-200 rounded-lg px-4 py-3">
+                    <p class="text-sm text-gray-700 leading-snug">{result}</p>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Tags -->
+              {study.data.tags.length > 0 && (
+                <div class="flex flex-wrap gap-2 mt-5">
+                  {study.data.tags.map((tag) => (
+                    <span class="text-xs text-gray-500 px-2 py-0.5 rounded bg-gray-100">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding border-t border-gray-200">
+    <div class="container-narrow">
+      <div class="card text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Want similar results?</h2>
+        <p class="text-gray-500 mb-8">
+          We scope every engagement around a specific, measurable outcome and a 90-day delivery window.
+          Let us identify the highest-value target in your operations.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn-primary">Get your blueprint</a>
+          <a href="/how-we-work/" class="btn-secondary">How we work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
